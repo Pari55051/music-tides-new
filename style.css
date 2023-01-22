@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@300;400;500;600&display=swap');
+
+:root {
+    --grey: #ecedec;
+    --darkblue: #0d47a1;
+    --blue: #2196f3;
+    --white: #fff;
+    --black: #000;
+}
+
+::-webkit-scrollbar {display: none;}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sono', sans-serif;;
+}
+
+button {
+    height: 3.5rem;
+    width: 10rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+button.white {
+    background-color: var(--white);
+    color: var(--darkblue);
+}
+
+button.white:hover {
+    background-color: var(--darkblue);
+    color: var(--white);
+    transition: .5s all ease;
+}
+
+button.color {
+    background-color: var(--darkblue);
+    color: var(--white);
+}
+
+button.color:hover {
+    background-color: var(--blue);;
+    transition: .5s all ease;
+}
+
+.underline {
+    height: 10px;
+    width: 75px;
+    background-color: var(--darkblue);
+    margin: 0 auto;
+    margin-top: .2rem;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    margin-left: 4rem;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 7.5rem;
+}
+
+.grid-container {
+    width: min-content;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: auto;
+}
+
+.grid-item {
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    background-color: var(--grey);
+    border-radius: 20px;
+}
+
+.wave {
+    width: 100%;
+    margin: 0;
+}
+
+
+
+
+/* Nav Bar */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    height: 13vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--darkblue);
+    z-index: 5;
+}
+
+header nav #logo {
+    height: 13vh;
+    position: absolute;
+    top: 0px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul a {
+    text-decoration: none;
+    color: var(--white);
+    margin: auto 0;
+    font-size: 1.3rem;
+    padding-right: 1.5rem;
+}
+
+header nav ul a:hover {
+    color: var(--blue);
+}
+
+.fa-circle-user {
+    font-size: 2.5rem;
+    top: -0.25rem;
+    position: relative;
+}
+
+.fa-circle-user:hover {
+    color: var(--grey);
+}
+
+
+
+/* Hero */
+#hero {
+    height: 90vh;
+    width: 100vw;
+    background-color: var(--blue);
+    display: flex;
+    padding: 3.5rem;
+    padding-top: 8rem;
+    justify-content: space-between;
+}
+
+#hero .text {
+    width: 60%;
+    margin: auto 0;
+    margin-left: 3rem;
+}
+
+#hero .text h1 {
+    font-size: 6rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+#hero .img {
+    width: 40%;
+}
+
+
+
+
+/* Services */
+#services {
+   width: 100%;
+   padding: 3rem;
+   margin-top: -9rem;
+}
+
+#services .list .service {
+    height: 160px;
+    width: 125px;
+    margin-right: 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#services .list .service .icon {
+    height: 75%;
+    background-color: var(--darkblue);
+    border-radius: 55%;
+    font-size: 4.7rem;
+    color: var(--white);
+    text-align: center;
+}
+
+#services .list .service .icon i {
+    vertical-align: middle;
+    position: relative;
+    top: 0.4rem;
+}
+
+#services .list .service .icon-description {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: .5rem;
+}
+
+#services .list .service:hover .icon {
+    background-color: var(--blue);
+}
+
+
+
+
+
+/* Stats */
+#stats {
+    margin-top: -6rem;
+    width: 100%;
+    padding: 3rem;
+    background-color: var(--blue);
+}
+
+#stats .list .stat {
+    margin-right: 10rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#stats .list .stat .stat-num {
+    position: relative;
+    font-size: 4.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--white);
+}
+
+#stats .list .stat .stat-description {
+    font-size: 3rem;
+    color: var(--white);
+}
+
+
+
+
+/* Categories */
+#categories {
+    margin-top: -5rem;
+}
+
+#categories a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+#categories .bg-image {
+    overflow: hidden;
+}
+
+#categories .bg-image img {
+    height: 165px;
+    width: 200px;
+}
+
+#categories .grid-container .grid-item .genre {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#categories .grid-container .grid-item .more {
+    font-size: 10rem;
+    text-align: center;
+}
+
+#categories .grid-container .grid-item:hover img {
+    transform: scale(1.1);
+    transition: 0.5s all ease;
+    opacity: 0.7;
+}
+
+
+
+/* Testimonials */
+#testimonials {
+    width: 100%;
+    background-color: var(--blue);
+    margin-top: -3rem;
+    padding: 1.5rem;
+}
+
+#testimonials .list .card {
+    width: 40%;
+    background-color: var(--white);
+    margin-right: 7rem;
+    border-radius: 20px;
+    display: flex;
+    padding: 1rem;
+}
+
+#testimonials .list .card .profile {
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    top: 10%;
+}
+
+#testimonials .list .card .profile img {
+    width: 100%;
+    height: 60%;
+    border-radius: 50%;
+    position: relative;
+}
+
+#testimonials .list .card .profile p {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+#testimonials .list .card .review {
+    width: 70%;
+    padding: 1.3rem;
+    margin: auto 0;
+    font-size: 1.2rem;
+}
+
+#testimonials .list .card:hover {
+    background-color: var(--grey);
+    transition: 0.5s all ease;
+}
+
+
+
+/* Newsletter Subscription */
+#subscribe {
+    padding: 2rem;
+    display: flex;
+    margin-top: -5rem;
+    margin-bottom: 5rem;
+}
+
+#subscribe .text {
+    font-size: 3.4rem;
+    width: 50%;
+    margin-left: 6rem;
+}
+
+#subscribe .text .blue-text {
+    color: var(--blue);
+}
+
+#subscribe form {
+    position: relative;
+    top: 4.5rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 4rem;
+}
+
+#subscribe form input {
+    width: 75%;
+    height: 20%;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    padding: 1rem;
+    border: solid 3px var(--darkblue);
+    margin-bottom: 1rem;
+}
+
+
+
+
+/* Footer */
+footer {
+    display: flex;
+    background-color: var(--darkblue);
+    overflow: hidden;
+    padding: 0;
+}
+
+footer .logo {
+    position: relative;
+    top: 0.5rem;
+    width: 20%;
+    margin-left: 2rem;
+    height: 100%;
+}
+
+footer .list ul {
+    position: relative;
+    top: 0.4rem;
+    left: 26rem;
+    margin: auto 0;
+    margin-right: 4rem;
+    list-style-type: none;
+    color: var(--grey);
+    font-size: 1.2rem;
+}
+
+footer .list ul li.top {
+    font-weight: bold;
+    color: var(--white);
+    margin-bottom: 0.6rem;
+    font-size: 1.3rem;
+}
+
+footer .corner-wave {
+    position: absolute;
+    right: 0;
+    height: 26%;
+    width: 17%;
+}
+
+footer .list ul li:hover {
+    color: var(--blue);
+    text-decoration: underline;
+}
+
+footer .list ul li.top:hover {
+    color: var(--white);
+    text-decoration: none;
+}
